@@ -1,0 +1,169 @@
+/* Site Colors:
+  #1A446C - blue grey
+  #689DC1 - light blue
+  #D4E6F4 - very light blue
+  #EEE4B9 - light tan
+  #8D0D19 - burgundy
+*/
+
+html { height: 100%; width: 100%; }
+body {
+  width: 100%; height: 100%; 
+  margin: 0; padding: 0; border: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 13px; line-height: 15px;
+  background: #EEE4B9;
+}
+img { border: none; }
+a { color: #8D0D19; }
+a:hover { color: #1A446C; }
+
+#mainheader {
+	height: 90px; width: 100%; 
+	
+	
+}
+
+#headerlh {
+	float: left;
+	width: 202px; height: 100%; 	
+	margin: 0; padding: 0; text-align: center; 
+  background: #689DC1; color: #8D0D19;
+}
+
+
+#headerrh { 
+	
+	width: 100%; height: 100%; 	
+	margin: 0; padding: 0; text-align: left; 
+  background: #1A446C; color: #D4E6F4;
+}	
+
+#header h1 { padding: 1em; margin: 0; }
+
+#line {
+	height: 2px; width: 100%; 
+	background: #D4E6F4;
+}
+
+#main { 
+	height: 100%; 
+	/* 
+	height: 1000px;
+	Боковые дивы растягиваются. Полосы прокрутки появляются. Текст может просвечиваться под футером. Без overflow:auto; много текста уйдёт ниже всех элементов и начнёт заполнять собой всю ширину экрана от левого края до правого, просвечиваясь через фон.
+	
+	min-height: 1000px;
+	Боковые дивы не растягиваются. Полосы прокрутки не появляются. Все помещается на одну страницу. Без overflow:auto; много текста заполнит собой всё свободное пространство до футера. 
+			В этой версии использовать
+			#page { 	
+				height: 100%;
+				padding-left: 2em; 				
+				padding-top: 5px;
+				padding-bottom: 5px;				
+				vertical-align: top; 
+				background: #EEE4B9;
+				overflow: auto;
+				}
+	
+	min-height: 100%; 		
+	Полосы прокрутки не появляются. Боковые дивы не растягиваются. Все помещается на одну страницу. Без overflow:auto; много текста заполнит собой всё свободное пространство до футера. 
+	
+	height: 100%;		
+	Полосы прокрутки появляются. Боковые дивы растягиваются.	
+			В этой версии использовать
+			#page { 	
+				height: 100%;
+				padding-left: 2em; 
+				padding-top: 0;
+				padding-bottom: 0;
+				vertical-align: top; 
+				background: #EEE4B9;
+				overflow: auto;
+				}
+				
+	min-height: auto;  и height: auto; 
+	Полосы прокрутки не появляются. Боковые дивы не растягиваются. Всё помещается на одну страницу. min-height: auto; даже не появляется в консоли Firefox, появляется только height: auto;
+	*/
+	width: 100%; 
+	margin: 0; padding: 0; 
+	background: #EEE4B9;
+}
+#footer { 
+	clear: both;
+	height: 2em; margin: 0; padding: 1em; 
+	text-align: center; 
+	background: #1A446C;  color: #D4E6F4;
+}
+
+/* Navigation */
+#navigation { 
+	
+	float: left;
+	width: 150px; height: 100%; 
+	margin: 0; padding: 0 2em; 
+	color: #D4E6F4; background: #1A446C;
+	
+}
+#navigation a { color: #D4E6F4; text-decoration: none; }
+#navigation a:hover { color: #FFFFFF; }
+ul.subjects { 
+	margin: 1em 0; padding-left: 0; list-style: none;
+}
+
+ul.pages { padding-left: 2em;  list-style: square; font-weight: normal;}
+.selected { font-weight: bold; }
+
+/* Reklama */
+#reklama { 
+	float: right;
+	width: 152px; height: 100%; 
+	margin: 0; padding: 0 2px;
+	font-size: 10px; text-align: center; 
+	border-style: dotted; /* стиль границы */
+	border-width: 0px 1px; /* сначала толщина верхней и нижней границы, потом левой и правой границы */
+	/* в одну строчку: отступы 1-сверху 2-справа 3-снизу 4-слева */
+	color: #1A446C; background: #EEE4B9;
+}
+#reklama a { color: #1A446C; text-decoration: none; }
+#reklama a:hover { color: #FFFFFF; }
+
+/* Page Content */
+#page { 
+	/*float: left; */
+		height: 100%;
+		padding-left: 2em; 
+		padding-top: 0;
+		padding-bottom: 0;
+		vertical-align: top; 
+		background: #EEE4B9;
+		overflow: auto;
+}
+#page h2 { color: #8D0D19; margin-top: 1em;}
+#page h3 { color: #8D0D19; }
+
+.view-content {
+	margin: 1em; padding: 1em; border: 1px solid #999;
+}
+
+#form { 
+	float: left;
+	width: 700px;
+	vertical-align: top;
+	/*left: 170px;  /*Расстояние от левого края */ 
+}
+
+div.message {
+	border: 2px solid #8D0D19;
+	color: #8D0D19; font-weight: bold;
+	margin: 1em 0 ; padding: 1em;
+	width: 700px;
+}
+
+/* errors */
+.error {
+	color: #8D0D19; border: 2px solid #8D0D19;
+	margin: 1em 0; padding: 1em;
+}
+.error ul {
+	padding-left: 2em;
+}
