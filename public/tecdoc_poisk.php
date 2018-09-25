@@ -20,7 +20,7 @@
 
  
  <div id="page"> 
- </br>
+ <br>
 
 <form id="crossnumpoisk" name="crossnumpoisk" method="post" action="tecdoc_poisk.php">
   Поиск по кроссам Текдока &nbsp;
@@ -46,11 +46,11 @@ if (isset($_POST['crossnumsubmit'])) {
 	
 	$prep_artikul = mysql_crossnum_prep($_POST['artikul']);
 		
-	if (empty($prep_artikul)) {echo "- Ничего не вбито</br>";} // не обязательно делать else: просто при истинном условии добавляется сообщение.
+	if (empty($prep_artikul)) {echo "- Ничего не вбито<br>";} // не обязательно делать else: просто при истинном условии добавляется сообщение.
 		
-		$manageinfo.= "</br>";
+		$manageinfo.= "<br>";
 		$manageinfo.= "----- Служебная информация -----";
-		$manageinfo.= "</br>";
+		$manageinfo.= "<br>";
 		
 		
 		
@@ -67,7 +67,7 @@ if (isset($_POST['crossnumsubmit'])) {
 			$count_array = mysqli_fetch_assoc($nabor_chisla_artikulov);
 			//$admininfo.= "Массив COUNT: ";
 			//$admininfo.= $count_array['COUNT(*)']; 
-			//$admininfo.= "</br>";
+			//$admininfo.= "<br>";
 			
 			if (!empty($prep_artikul) and $count_array['COUNT(*)'] == 0) {echo "- Не найден артикул по базе";} // Сообщение для всех в случае истинности условия
 		
@@ -88,7 +88,7 @@ if (isset($_POST['crossnumsubmit'])) {
 				$proizvod_array = mysqli_fetch_assoc($proizvoditela_nabor);	// Этой строчкой вместо цикла мы единожды отбираем только одно первое найденное значение. $proizvod_array['proizvoditel']
 				
 				$manageinfo.= $proizvod_array['proizvoditel'];
-				$manageinfo.= "</br>";				
+				$manageinfo.= "<br>";				
 				
 				
 				
@@ -104,24 +104,24 @@ if (isset($_POST['crossnumsubmit'])) {
 					$oem_nabor = mysqli_query($connection, $query10);
 					
 				//	$admininfo.= $query10;
-				//	$admininfo.= "</br>";
+				//	$admininfo.= "<br>";
 				//	if (!$oem_nabor){
 				//	$admininfo.= "Database do not returned anything. Not oem_nabor in query10.";}
 				
 				
 					if ($oem_nabor && mysqli_affected_rows($connection) > 0) {
 						
-						$manageinfo.= "</br>";
+						$manageinfo.= "<br>";
 						$manageinfo.= "Oem_nabor:";
-						$manageinfo.= "</br>";
-						$manageinfo.= "</br>";
+						$manageinfo.= "<br>";
+						$manageinfo.= "<br>";
 						
 						while ($crossnum = mysqli_fetch_assoc($oem_nabor)) {	// $crossnum - это массив строки из таблицы	_oem
 						
 						// обращаемся с оем_набором к остаткам
 						
 						$manageinfo.= $crossnum['CODE_PARTS'];
-						$manageinfo.= "</br>";
+						$manageinfo.= "<br>";
 						
 						$query11 = "SELECT firma, artikul, naimenovanie, zakup, kolvo, postavschik ";	
 						$query11.= " FROM _ostatki";

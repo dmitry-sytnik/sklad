@@ -95,7 +95,7 @@
 		$output .= ">";
 			if(isset($_SESSION["admin_id"])) { // Если есть админ в сессии, то ссылки на админские страницы
 				$output .= "-------------";
-				$output .= "</br>";
+				$output .= "<br>";
 				$output .= "<a href=\"manage_users.php";
 				$output .= "\">";
 				$output .= "Управление пользователями (в разработке)</a></li><br/>";

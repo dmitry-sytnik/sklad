@@ -27,7 +27,7 @@
  <div id="page">
 
  
- </br>
+ <br>
 <form id="poisk" name="poisk" method="post" action="pryam_poisk_admin.php">
   Поиск по прямому Артикулу &nbsp;
   <input type="text" name="artikul" id="artikul" /> &nbsp;

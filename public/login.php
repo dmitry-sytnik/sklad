@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
 ?><?php include("../includes/layouts/header.php") ?>
 
 	<div id="page"> 	
-	</br>
+	<br>
  
 		<?php echo message(); ?>
 		<?php //echo form_errors($errors); ?>

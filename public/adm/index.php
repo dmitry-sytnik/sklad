@@ -12,7 +12,7 @@
 
  
 	<div id="page"> 
-	</br>
+	<br>
 	<h3>Welcome to admin's Poisk po skladu!</h3>
 
 <?php echo message();?>

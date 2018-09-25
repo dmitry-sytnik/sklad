@@ -27,7 +27,7 @@
 
  
  <div id="page"> 
- </br>
+ <br>
 
 
 <form id="crossnumpoisk" name="crossnumpoisk" method="post" action="cross_poisk.php">
@@ -61,21 +61,21 @@ if (isset($_POST['crossnumsubmit'])) {
 	
 	if (empty($prep_artikul)) {echo "- Ничего не вбито";} // не обязательно делать else: просто при истинном условии добавляется сообщение.
 	
-	$manageinfo.= "</br>";
+	$manageinfo.= "<br>";
 	$manageinfo.= "----- Служебная информация -----";
-	$manageinfo.= "</br>";
+	$manageinfo.= "<br>";
 	
 	if (isset($_POST['nuli'])) { // Заметка: чекбокс не отправляется с формой, если он не был отмечен
         $manageinfo.= "Нулевые позиции были отмечены галкой";
-		$manageinfo.= "</br>";}
+		$manageinfo.= "<br>";}
 	
 	$manageinfo.= "Вбито: ";
 	$manageinfo.= $_POST['artikul'];
-	$manageinfo.= "</br>";
+	$manageinfo.= "<br>";
 	
 	$manageinfo.= "Обработано как: ";
 	$manageinfo.= $prep_artikul;
-	$manageinfo.= "</br>";
+	$manageinfo.= "<br>";
 	
 	if (!empty($prep_artikul)) { 
 			// 1. Выясняем количество совпадений по базе со вбитым артикулом
@@ -91,12 +91,12 @@ if (isset($_POST['crossnumsubmit'])) {
 			$count_array = mysqli_fetch_assoc($nabor_chisla_artikulov);
 			//$admininfo.= "Массив COUNT: ";
 			//$admininfo.= $count_array['COUNT(*)'];
-			//$admininfo.= "</br>";
+			//$admininfo.= "<br>";
 			
 			if ($count_array['COUNT(*)'] == 0) {echo "- Не найден артикул по базе";} // Сообщение для всех в случае истинности условия
 
 			if ($count_array['COUNT(*)'] > 1) {// Если количество совпадений больше 1.
-				$manageinfo.= "Число найденных артикулов в базе больше 1"."</br>";
+				$manageinfo.= "Число найденных артикулов в базе больше 1"."<br>";
 				$manageinfo.= "----------------------------------";
 			
 				$query01 = "SELECT * ";
@@ -156,17 +156,17 @@ if (isset($_POST['crossnumsubmit'])) {
 			$join_nabor = mysqli_query($connection, $query2);
 			confirm_query($join_nabor);
 			
-				//$admininfo.= "</br>";
+				//$admininfo.= "<br>";
 				//$admininfo.= "Cross_nabor:";
-				//$admininfo.= "</br>";
-				//$admininfo.= "</br>";
+				//$admininfo.= "<br>";
+				//$admininfo.= "<br>";
 			
 			
 			while ($resultat = mysqli_fetch_assoc($join_nabor)) {// $resultat - это массив строки из остатков	
 				
 				
 				//$admininfo.= $resultat["crossnum"];
-				//$admininfo.= "</br>";
+				//$admininfo.= "<br>";
 				
 				
 			// 5. Последовательно, в цикле, выводим в табличку найденную строку из join-таблицы.
@@ -205,15 +205,15 @@ if (isset($_POST['crossnumsubmit'])) {
 			$oem_nabor = mysqli_query($connection, $query4);
 			confirm_query($oem_nabor);
 			
-			$manageinfo.= "</br>";
+			$manageinfo.= "<br>";
 			$manageinfo.= "Oem_nabor:";
-			$manageinfo.= "</br>";
-			$manageinfo.= "</br>";
+			$manageinfo.= "<br>";
+			$manageinfo.= "<br>";
 			
 			while ($oem_resultat = mysqli_fetch_assoc($oem_nabor)) { // oem_resultat - это массив полученной строки
 				
 			$manageinfo.= $oem_resultat['crossnum'];
-			$manageinfo.= "</br>";	
+			$manageinfo.= "<br>";	
 				
 			}	
 			
@@ -246,13 +246,13 @@ if (isset($_POST['crossnumsubmit'])) {
 		die("Database do not returned headartikula_nabor in the get.");}
 		$headlink_array = mysqli_fetch_assoc($headartikula_nabor); // Этой строчкой вместо цикла мы единожды отбираем только один первый найденный артикул
 		
-		$manageinfo.= "</br>";
+		$manageinfo.= "<br>";
 		$manageinfo = "----- Служебная информация -----";
-		$manageinfo.= "</br>";
+		$manageinfo.= "<br>";
 		
 		//$admininfo.= "Headlink founded: ";
 		//$admininfo.= $headlink_array['headartikul'];
-		//$admininfo.= "</br>";
+		//$admininfo.= "<br>";
 		
 		
 		$query2  = "SELECT DISTINCT crossnum";
@@ -264,15 +264,15 @@ if (isset($_POST['crossnumsubmit'])) {
 		die("Database do not returned crossnum_nabor in the get.2.");}
 		/*	if ($crossnum_nabor){
 		echo "returned crossnum_nabor in the get.2.";
-		echo "</br>";		
+		echo "<br>";		
 		}	*/
 		
 		$manageinfo.= "Найденные кроссы:";
-		$manageinfo.= "</br>";
+		$manageinfo.= "<br>";
 		
 		while($crosses = mysqli_fetch_assoc($crossnum_nabor)) { 
 		$manageinfo.= "$crosses[crossnum]";
-		$manageinfo.= "</br>";
+		$manageinfo.= "<br>";
 		
 			$query3  = "SELECT * ";
 			$query3 .= " FROM _ostatki";

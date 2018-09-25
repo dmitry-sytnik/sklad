@@ -18,7 +18,7 @@
 
  
 	<div id="page"> 
-	</br>
+	<br>
 	
 	<h3>Welcome to Poisk po skladu!</h3>
 

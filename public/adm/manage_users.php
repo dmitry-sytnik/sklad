@@ -45,10 +45,10 @@
 			<br/>
 			<a href="new_manager.php">Add a new manager</a>
 			
-			</br>
-			</br>
+			<br>
+			<br>
 			<hr />
-			</br>
+			<br>
 			
 			<h2>Manage Users</h2>
 		
